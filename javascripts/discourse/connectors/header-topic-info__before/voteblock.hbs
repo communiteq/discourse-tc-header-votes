@@ -1,9 +1,5 @@
 {{#if this.topic.category.can_vote}}
   <span class="header-topic-before">
-    <MountWidget
-      @widget="vote-box"
-      @args={{this.topic}}
-      @showLogin={{route-action "showLogin"}}
-    />
+    <VoteBox @topic={{this.topic}} @showLogin={{routeAction "showLogin"}} />
   </span>
 {{/if}}
